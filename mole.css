@@ -71,7 +71,7 @@
 }
 
 html body {
-  background-color: cornsilk;
+  background-color: floralwhite;
   padding: 10px;
   min-height: 100vh;
 }
@@ -100,9 +100,11 @@ html body {
 
  footer {
   background-color: cornflowerblue;
-  /* padding: -10px; */
+  padding-right: 10px;
   position: fixed;
   left: 0%;
+  margin: 10px;
+ 
   bottom: 0%;
   width: 100%;
 }
