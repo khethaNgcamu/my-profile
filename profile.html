@@ -185,5 +185,15 @@
     <footer>
         <p>© 2024 Smanga Ngcamu</p>
     </footer>
+
+    <script>
+        // Notify Netlify function on page load
+        fetch('/.netlify/functions/sendEmail', {
+            method: 'POST',
+        })
+        .then(response => console.log('Visitor notification sent'))
+        .catch(error => console.error('Error sending notification:', error));
+    </script>
+    
 </body>
 </html>
