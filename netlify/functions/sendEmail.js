@@ -3,7 +3,7 @@ sgMail.setApiKey('P1HZETZJG2VEAU92LD6DW214');
 
 exports.handler = async (event, context) => {
   const message = {
-    to: '43405363@mylife.unisa.ac.za', 
+    to: 'khethakuthula@gmail.com', 
     from: 'ngcamukhetha@gmail.com', 
     subject: 'New Visitor on Smanga Ngcamu Portfolio',
     text: `Someone accessed your portfolio website at ${new Date().toLocaleString()}.`,

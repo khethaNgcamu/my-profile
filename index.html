@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smanga Ngcamu - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
         header {
-            background: #4CAF50;
+            background: linear-gradient(to bottom, rgba(76, 175, 80, 0.7), rgba(76, 175, 80, 0.7)), url('path/to/background-image.jpg') no-repeat center center/cover;
             color: white;
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
         }
         section {
             padding: 2rem;
@@ -25,6 +39,18 @@
         h2 {
             color: #4CAF50;
             margin-bottom: 0.5rem;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
         }
         .skills ul {
             display: flex;
@@ -37,12 +63,69 @@
             margin: 0.5rem;
             padding: 0.5rem 1rem;
             border-radius: 5px;
+            display: flex;
+            align-items: center;
         }
+        .skills li i {
+            margin-right: 0.5rem;
+        }
+        
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
         footer {
             background: #333;
             color: white;
             text-align: center;
             padding: 1rem 0;
+        }
+        footer a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #4CAF50;
+        }
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            section {
+                padding: 1rem;
+            }
+            .skills ul {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -50,48 +133,72 @@
     <header>
         <h1>Smanga Ngcamu</h1>
         <p>Software Engineer | AI Enthusiast | Educator</p>
-        <p>Email: ngcamukhetha@gmail.com | LinkedIn: <a href="https://www.linkedin.com/in/smanga-ngcamu-84226915b/" style="color: white;">smanga-ngcamu</a></p>
+        <p>Email: ngcamukhetha@gmail.com | LinkedIn: <a href="https://www.linkedin.com/in/smanga-ngcamu-84226915b" style="color: white;"><i class="fab fa-linkedin"></i> smanga-ngcamu</a></p>
     </header>
 
+    <!-- About Me -->
     <section>
-        <h2>About Me</h2>
-        <p>
-            I am a dedicated software engineer with over 8 years of experience blending my passion for education and technology. My journey began in the classroom as an educator, where I discovered the power of problem-solving through code, inspiring me to transition into software development.
-        </p>
-        <p>
-            Over the years, I’ve honed my skills in building scalable applications and AI-driven solutions. My expertise includes using Python libraries such as:
-            <ul>
-                <li><strong>Pandas:</strong> for efficient data manipulation and analysis.</li>
-                <li><strong>TensorFlow:</strong> for creating and training machine learning models.</li>
-                <li><strong>OpenCV:</strong> for computer vision tasks like image processing and object detection.</li>
-            </ul>
-            Additionally, I have experience integrating these tools into web applications using frameworks like Flask and ASP.NET, enabling robust and dynamic user experiences.
-        </p>
-        <p>
-            Beyond technical expertise, I enjoy mentoring aspiring developers, exploring innovative tech trends, and contributing to open-source projects. My goal is to create solutions that not only solve problems but also empower individuals and communities.
-        </p>
+        <div class="card">
+            <h2>About Me</h2>
+            <p>
+                I am a dedicated software engineer with over 8 years of experience blending my passion for education and technology. My journey began in the classroom as an educator, where I discovered the power of problem-solving through code, inspiring me to transition into software development.
+            </p>
+            <p>
+                Beyond technical expertise, I enjoy mentoring aspiring developers, exploring innovative tech trends, and contributing to open-source projects. My goal is to create solutions that not only solve problems but also empower individuals and communities.
+            </p>
+        </div>
     </section>
     
+    <!-- Experience -->
+    <section>
+        <div class="card">
+            <h2>Experience</h2>
+            <ul>
+                <li>8 years of teaching experience in both classroom and online environments.</li>
+                <li>Transitioned to software engineering and AI development, focusing on building scalable applications and AI-driven solutions.</li>
+                <li>Experience with ASP.NET Core, SQL Server, and Python libraries such as:</li>
+                <ul>
+                    <li><i class="fas fa-code"></i> Pandas</li>
+                    <li><i class="fas fa-database"></i> TensorFlow</li>
+                    <li><i class="fas fa-brain"></i> OpenCV</li>
+                </ul>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Education -->
+    <section>
+        <div class="card">
+            <h2>Education</h2>
+            <ul>
+                <li>Post Graduate Diploma in Artificial Intelligence, MANCOSA (Graduated 2020)</li>
+                <li>B.Sc. in Computer Science, UNISA (Graduated 2016)</li>
+                <li>Certified in Oracle Cloud Infrastructure 2024 Generative AI Certified Professional.</li>
+            </ul>
+        </div>
+    </section>
 
+    <!-- Skills -->
     <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>ASP.NET</li>
-            <li>C#</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>AI/ML</li>
-            <li>Teaching</li>
-        </ul>
+        <div class="card">
+            <h2>Skills</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> ASP.NET Core</li>
+                <li><i class="fas fa-database"></i> SQL Server</li>
+                <li><i class="fas fa-brain"></i> Machine Learning</li>
+                <li><i class="fas fa-code"></i> C#</li>
+                <li><i class="fas fa-code"></i> Java</li>
+                <li><i class="fas fa-code"></i> JavaScript</li>
+                <li><i class="fas fa-code"></i> Python</li>
+            </ul>
+        </div>
     </section>
 
     <section>
         <h2>Projects</h2>
         
         <!-- Virtual AI-Powered Tutor -->
-        <div>
+        <div class="project-card">
             <h3>Virtual AI-Powered Tutor (Under Construction)</h3>
             <p>
                 A web application aimed at helping students (Grade R to tertiary) with schoolwork. The project features book summaries, AI-driven personalized learning, and an interactive workspace for teachers and students.
@@ -109,7 +216,7 @@
         </div>
         
         <!-- Intelligent Traffic Management System -->
-        <div>
+        <div class="project-card">
             <h3>Intelligent Traffic Management System (Under Development)</h3>
             <p>
                 This project uses AI and Machine Learning to optimize urban traffic by processing real-time data to predict congestion, dynamically adjust traffic lights, and recommend alternate routes for smoother travel.
@@ -125,75 +232,62 @@
                 <strong>Live Demo:</strong> Coming Soon  
             </p>
         </div>
+        
+        <!-- Image Processing with OpenCV -->
+        <div class="project-card">
+            <h3>Image Processing with OpenCV</h3>
+            <p>
+                A project focused on image processing techniques using OpenCV in Python. The aim is to automate tasks like object detection, face recognition, and image filtering for various applications including security and automated quality control.
+            </p>
+            <ul>
+                <li>Real-time video stream analysis for object detection.</li>
+                <li>Face recognition using deep learning models.</li>
+                <li>Image filtering and enhancement techniques.</li>
+            </ul>
+            <p>
+                <strong>GitHub:</strong> <a href="https://github.com/khethaNgcamu/Artificial-Intelligence-with-python/tree/main/Image_Enhancement" target="_blank">View Repository</a>  
+                <strong>Live Demo:</strong> Coming Soon  
+            </p>
+        </div>
 
-   <!-- Image Processing with OpenCV -->
-    <div>
-        <h3>Image Processing with OpenCV</h3>
-        <p>
-            A Python-based project that demonstrates essential image processing techniques such as enhancement, feature detection, and transformation for practical applications.
-        </p>
-        <ul>
-            <li>Grayscale conversion and Gaussian blur for image enhancement.</li>
-            <li>Edge detection using the Canny algorithm.</li>
-            <li>Feature detection using ORB (Oriented FAST and Rotated BRIEF).</li>
-            <li>Image segmentation with thresholding methods.</li>
-            <li>Image transformations including resizing and rotation.</li>
-        </ul>
-        <p>
-            <strong>GitHub:</strong> <a href="https://github.com/khethaNgcamu/Artificial-Intelligence-with-python/blob/main/Image_Enhancement/Image_enhancer.py" target="_blank">View Repository</a>  
-            <strong>Live Demo:</strong> Not Available  
-        </p>
-    </div>
-
-    <!-- Book Recommendation System -->
-    <div>
-        <h3>Book Recommendation System</h3>
-        <p>
-            A collaborative filtering-based project using Python to suggest books to users based on their preferences and the ratings of similar users. This project demonstrates advanced data processing, user similarity computation, and recommendation algorithms.
-        </p>
-        <ul>
-            <li>Merged and processed datasets containing books, users, and ratings information.</li>
-            <li>Filtered data for active users and popular books to enhance accuracy.</li>
-            <li>Built a sparse user-item matrix to optimize performance on large datasets.</li>
-            <li>Computed user similarity using cosine similarity for personalized recommendations.</li>
-            <li>Dynamically recommended unrated books based on similar user preferences.</li>
-        </ul>
-        <p>
-            <strong>GitHub:</strong> <a href="https://github.com/khethaNgcamu/Artificial-Intelligence-with-python/blob/main/Recommender_system" target="_blank">View Repository</a>  
-            <strong>Live Demo:</strong> Not Available  
-        </p>
-    </div>
-    </section>
-    
-    
-    <section>
-        <h2>Experience</h2>
-        <h3>Software Engineer</h3>
-        <p>Yoke Tech | 2022–Present</p>
-        <ul>
-            <li>Developed web applications using .NET Core and SQL Server.</li>
-            <li>Implemented AI models to personalize user experiences.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <p>Post Graduate Diploma in Artificial Intelligence - MANCOSA</p>
-        <p>Bachelor's in Computer Science - UNISA</p>
+        <!-- Book Recommender System -->
+        <div class="project-card">
+            <h3>Book Recommender System</h3>
+            <p>
+                A personalized book recommendation platform that leverages machine learning to suggest books based on users' interests, reading history, and preferences.
+            </p>
+            <ul>
+                <li>Developed using Python and Flask for the backend.</li>
+                <li>Machine Learning algorithms (Collaborative Filtering) to suggest books.</li>
+                <li>Intuitive user interface with Bootstrap for responsive design.</li>
+                <li>Database integration with SQLite for user data and book records.</li>
+            </ul>
+            <p>
+                <strong>GitHub:</strong> <a href="https://github.com/khethaNgcamu/Artificial-Intelligence-with-python/tree/main/Recommender_system" target="_blank">View Repository</a>  
+                <strong>Live Demo:</strong> Coming Soon  
+            </p>
+        </div>
     </section>
 
     <footer>
-        <p>© 2024 Smanga Ngcamu</p>
+        <p>Contact me at <a href="mailto:ngcamukhetha@gmail.com">ngcamukhetha@gmail.com</a></p>
+        <p>&copy; 2024 Smanga Ngcamu. All rights reserved.</p>
     </footer>
 
+    <button id="backToTop" title="Back to Top">&#8679;</button>
+
     <script>
-        // Notify Netlify function on page load
-        fetch('/.netlify/functions/sendEmail', {
-            method: 'POST',
-        })
-        .then(response => console.log('Visitor notification sent'))
-        .catch(error => console.error('Error sending notification:', error));
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        };
+        document.getElementById("backToTop").onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
     </script>
-    
 </body>
 </html>
